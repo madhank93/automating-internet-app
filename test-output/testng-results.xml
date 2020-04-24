@@ -1,29 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-04-24T21:37:42 IST" name="Default suite" finished-at="2020-04-24T21:38:01 IST" duration-ms="19417">
+  <suite started-at="2020-04-24T21:55:16 IST" name="Default suite" finished-at="2020-04-24T21:55:25 IST" duration-ms="8467">
     <groups>
     </groups>
-    <test started-at="2020-04-24T21:37:42 IST" name="Default test" finished-at="2020-04-24T21:38:01 IST" duration-ms="19417">
-      <class name="io.github.madhank93.automating_internet_app.DynamicLoading">
-        <test-method is-config="true" signature="initialSetup()[pri:0, instance:io.github.madhank93.automating_internet_app.DynamicLoading@3541cb24]" started-at="2020-04-24T21:37:42 IST" name="initialSetup" finished-at="2020-04-24T21:37:44 IST" duration-ms="2346" status="PASS">
+    <test started-at="2020-04-24T21:55:16 IST" name="Default test" finished-at="2020-04-24T21:55:25 IST" duration-ms="8467">
+      <class name="io.github.madhank93.automating_internet_app.EntryAd">
+        <test-method is-config="true" signature="initialSetup()[pri:0, instance:io.github.madhank93.automating_internet_app.EntryAd@52102734]" started-at="2020-04-24T21:55:16 IST" name="initialSetup" finished-at="2020-04-24T21:55:24 IST" duration-ms="7726" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialSetup -->
-        <test-method signature="waitTillElementDispalyed()[pri:0, instance:io.github.madhank93.automating_internet_app.DynamicLoading@3541cb24]" started-at="2020-04-24T21:37:44 IST" name="waitTillElementDispalyed" finished-at="2020-04-24T21:37:55 IST" duration-ms="11070" status="PASS">
+        <test-method signature="closeEntryAd()[pri:0, instance:io.github.madhank93.automating_internet_app.EntryAd@52102734]" started-at="2020-04-24T21:55:24 IST" name="closeEntryAd" finished-at="2020-04-24T21:55:25 IST" duration-ms="704" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- waitTillElementDispalyed -->
-        <test-method signature="waitTillElementRendered()[pri:0, instance:io.github.madhank93.automating_internet_app.DynamicLoading@3541cb24]" started-at="2020-04-24T21:37:55 IST" name="waitTillElementRendered" finished-at="2020-04-24T21:38:01 IST" duration-ms="5828" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- waitTillElementRendered -->
-        <test-method is-config="true" signature="quit()[pri:0, instance:io.github.madhank93.automating_internet_app.DynamicLoading@3541cb24]" started-at="2020-04-24T21:38:01 IST" name="quit" finished-at="2020-04-24T21:38:01 IST" duration-ms="123" status="PASS">
+        </test-method> <!-- closeEntryAd -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:io.github.madhank93.automating_internet_app.EntryAd@52102734]" started-at="2020-04-24T21:55:25 IST" name="quit" finished-at="2020-04-24T21:55:25 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
-      </class> <!-- io.github.madhank93.automating_internet_app.DynamicLoading -->
+      </class> <!-- io.github.madhank93.automating_internet_app.EntryAd -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

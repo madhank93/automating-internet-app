@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-04-24T21:55:16 IST" name="Default suite" finished-at="2020-04-24T21:55:25 IST" duration-ms="8467">
+  <suite started-at="2020-04-24T22:46:40 IST" name="Default suite" finished-at="2020-04-24T22:46:47 IST" duration-ms="7116">
     <groups>
     </groups>
-    <test started-at="2020-04-24T21:55:16 IST" name="Default test" finished-at="2020-04-24T21:55:25 IST" duration-ms="8467">
-      <class name="io.github.madhank93.automating_internet_app.EntryAd">
-        <test-method is-config="true" signature="initialSetup()[pri:0, instance:io.github.madhank93.automating_internet_app.EntryAd@52102734]" started-at="2020-04-24T21:55:16 IST" name="initialSetup" finished-at="2020-04-24T21:55:24 IST" duration-ms="7726" status="PASS">
+    <test started-at="2020-04-24T22:46:40 IST" name="Default test" finished-at="2020-04-24T22:46:47 IST" duration-ms="7116">
+      <class name="io.github.madhank93.automating_internet_app.ExitIntent">
+        <test-method is-config="true" signature="initialSetup()[pri:0, instance:io.github.madhank93.automating_internet_app.ExitIntent@52102734]" started-at="2020-04-24T22:46:40 IST" name="initialSetup" finished-at="2020-04-24T22:46:46 IST" duration-ms="6400" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialSetup -->
-        <test-method signature="closeEntryAd()[pri:0, instance:io.github.madhank93.automating_internet_app.EntryAd@52102734]" started-at="2020-04-24T21:55:24 IST" name="closeEntryAd" finished-at="2020-04-24T21:55:25 IST" duration-ms="704" status="PASS">
+        <test-method signature="mouseMove()[pri:0, instance:io.github.madhank93.automating_internet_app.ExitIntent@52102734]" started-at="2020-04-24T22:46:46 IST" name="mouseMove" finished-at="2020-04-24T22:46:47 IST" duration-ms="679" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- closeEntryAd -->
-        <test-method is-config="true" signature="quit()[pri:0, instance:io.github.madhank93.automating_internet_app.EntryAd@52102734]" started-at="2020-04-24T21:55:25 IST" name="quit" finished-at="2020-04-24T21:55:25 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- mouseMove -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:io.github.madhank93.automating_internet_app.ExitIntent@52102734]" started-at="2020-04-24T22:46:47 IST" name="quit" finished-at="2020-04-24T22:46:47 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
-      </class> <!-- io.github.madhank93.automating_internet_app.EntryAd -->
+      </class> <!-- io.github.madhank93.automating_internet_app.ExitIntent -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

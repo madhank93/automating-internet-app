@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="io.github.madhank93.automating_internet_app.EntryAd">
+      <class name="io.github.madhank93.automating_internet_app.ExitIntent">
         <methods>
-          <include name="initialSetup"/>
+          <include name="mouseMove"/>
           <include name="quit"/>
-          <include name="closeEntryAd"/>
+          <include name="initialSetup"/>
         </methods>
-      </class> <!-- io.github.madhank93.automating_internet_app.EntryAd -->
+      </class> <!-- io.github.madhank93.automating_internet_app.ExitIntent -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

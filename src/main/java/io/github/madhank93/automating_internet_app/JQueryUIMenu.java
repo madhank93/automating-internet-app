@@ -29,7 +29,7 @@ public class JQueryUIMenu {
 	}
 
 	@Test (priority = 1)
-	public void sendStringValue() {
+	public void mouseHoverOnMenuList() {
 		WebElement enabled = driver.findElement(By.linkText("Enabled"));
 		new Actions(driver).moveToElement(enabled).perform();
 

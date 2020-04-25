@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="io.github.madhank93.automating_internet_app.NestedFrames">
+      <class name="io.github.madhank93.automating_internet_app.ScreenshotOnError">
         <methods>
-          <include name="switchFrames"/>
-          <include name="quit"/>
+          <include name="WithCookieAfterVisitingPage"/>
           <include name="initialSetup"/>
+          <include name="quit"/>
+          <include name="screenshotOnFailure"/>
         </methods>
-      </class> <!-- io.github.madhank93.automating_internet_app.NestedFrames -->
+      </class> <!-- io.github.madhank93.automating_internet_app.ScreenshotOnError -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

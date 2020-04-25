@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-04-25T17:13:48 IST" name="Default suite" finished-at="2020-04-25T17:13:53 IST" duration-ms="5432">
+  <suite started-at="2020-04-25T18:14:10 IST" name="Default suite" finished-at="2020-04-25T18:14:24 IST" duration-ms="13891">
     <groups>
     </groups>
-    <test started-at="2020-04-25T17:13:48 IST" name="Default test" finished-at="2020-04-25T17:13:53 IST" duration-ms="5432">
-      <class name="io.github.madhank93.automating_internet_app.Hovers">
-        <test-method is-config="true" signature="initialSetup()[pri:0, instance:io.github.madhank93.automating_internet_app.Hovers@52102734]" started-at="2020-04-25T17:13:48 IST" name="initialSetup" finished-at="2020-04-25T17:13:53 IST" duration-ms="5204" status="PASS">
+    <test started-at="2020-04-25T18:14:10 IST" name="Default test" finished-at="2020-04-25T18:14:24 IST" duration-ms="13891">
+      <class name="io.github.madhank93.automating_internet_app.JQueryUIMenu">
+        <test-method is-config="true" signature="initialSetup()[pri:0, instance:io.github.madhank93.automating_internet_app.JQueryUIMenu@52102734]" started-at="2020-04-25T18:14:10 IST" name="initialSetup" finished-at="2020-04-25T18:14:22 IST" duration-ms="12030" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialSetup -->
-        <test-method signature="mouseHover()[pri:0, instance:io.github.madhank93.automating_internet_app.Hovers@52102734]" started-at="2020-04-25T17:13:53 IST" name="mouseHover" finished-at="2020-04-25T17:13:53 IST" duration-ms="189" status="PASS">
+        <test-method signature="sendStringValue()[pri:1, instance:io.github.madhank93.automating_internet_app.JQueryUIMenu@52102734]" started-at="2020-04-25T18:14:22 IST" name="sendStringValue" finished-at="2020-04-25T18:14:24 IST" duration-ms="1824" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- mouseHover -->
-        <test-method is-config="true" signature="quit()[pri:0, instance:io.github.madhank93.automating_internet_app.Hovers@52102734]" started-at="2020-04-25T17:13:53 IST" name="quit" finished-at="2020-04-25T17:13:53 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- sendStringValue -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:io.github.madhank93.automating_internet_app.JQueryUIMenu@52102734]" started-at="2020-04-25T18:14:24 IST" name="quit" finished-at="2020-04-25T18:14:24 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
-      </class> <!-- io.github.madhank93.automating_internet_app.Hovers -->
+      </class> <!-- io.github.madhank93.automating_internet_app.JQueryUIMenu -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

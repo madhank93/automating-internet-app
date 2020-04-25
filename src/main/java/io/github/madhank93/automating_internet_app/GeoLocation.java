@@ -18,7 +18,6 @@ public class GeoLocation {
 
 	WebDriver driver;
 	static final String CHROME_DRIVER_PATH = System.getProperty("user.dir") + "/drivers/chromedriver";
-	private static final WebDriver WebDriverRefrence = null;
 
 	@BeforeTest
 	public void initialSetup() {

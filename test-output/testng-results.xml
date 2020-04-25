@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-04-25T12:09:29 IST" name="Default suite" finished-at="2020-04-25T12:09:53 IST" duration-ms="24752">
+  <suite started-at="2020-04-25T17:13:48 IST" name="Default suite" finished-at="2020-04-25T17:13:53 IST" duration-ms="5432">
     <groups>
     </groups>
-    <test started-at="2020-04-25T12:09:29 IST" name="Default test" finished-at="2020-04-25T12:09:53 IST" duration-ms="24752">
-      <class name="io.github.madhank93.automating_internet_app.GeoLocation">
-        <test-method is-config="true" signature="initialSetup()[pri:0, instance:io.github.madhank93.automating_internet_app.GeoLocation@e1de817]" started-at="2020-04-25T12:09:29 IST" name="initialSetup" finished-at="2020-04-25T12:09:29 IST" duration-ms="8" status="PASS">
+    <test started-at="2020-04-25T17:13:48 IST" name="Default test" finished-at="2020-04-25T17:13:53 IST" duration-ms="5432">
+      <class name="io.github.madhank93.automating_internet_app.Hovers">
+        <test-method is-config="true" signature="initialSetup()[pri:0, instance:io.github.madhank93.automating_internet_app.Hovers@52102734]" started-at="2020-04-25T17:13:48 IST" name="initialSetup" finished-at="2020-04-25T17:13:53 IST" duration-ms="5204" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialSetup -->
-        <test-method signature="allowGeoloction()[pri:1, instance:io.github.madhank93.automating_internet_app.GeoLocation@e1de817]" started-at="2020-04-25T12:09:29 IST" name="allowGeoloction" finished-at="2020-04-25T12:09:39 IST" duration-ms="10048" status="PASS">
+        <test-method signature="mouseHover()[pri:0, instance:io.github.madhank93.automating_internet_app.Hovers@52102734]" started-at="2020-04-25T17:13:53 IST" name="mouseHover" finished-at="2020-04-25T17:13:53 IST" duration-ms="189" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- allowGeoloction -->
-        <test-method signature="blockGeoloction()[pri:2, instance:io.github.madhank93.automating_internet_app.GeoLocation@e1de817]" started-at="2020-04-25T12:09:39 IST" name="blockGeoloction" finished-at="2020-04-25T12:09:53 IST" duration-ms="14647" status="PASS">
+        </test-method> <!-- mouseHover -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:io.github.madhank93.automating_internet_app.Hovers@52102734]" started-at="2020-04-25T17:13:53 IST" name="quit" finished-at="2020-04-25T17:13:53 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- blockGeoloction -->
-      </class> <!-- io.github.madhank93.automating_internet_app.GeoLocation -->
+        </test-method> <!-- quit -->
+      </class> <!-- io.github.madhank93.automating_internet_app.Hovers -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

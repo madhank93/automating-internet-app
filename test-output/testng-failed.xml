@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="io.github.madhank93.automating_internet_app.GeoLocation">
+      <class name="io.github.madhank93.automating_internet_app.Hovers">
         <methods>
-          <include name="initialSetup"/>
-          <include name="allowGeoloction"/>
           <include name="quit"/>
+          <include name="mouseHover"/>
+          <include name="initialSetup"/>
         </methods>
-      </class> <!-- io.github.madhank93.automating_internet_app.GeoLocation -->
+      </class> <!-- io.github.madhank93.automating_internet_app.Hovers -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -29,11 +29,11 @@ public class DragAndDrop {
 	
 	@Test
 	public void dragAndDropYellowBox() {
-		Actions builder = new Actions(driver);
-		
 		WebElement yellowBox = driver.findElement(By.xpath("//div[@id='draggable1']"));
 		WebElement redBox = driver.findElement(By.xpath("//div[@id='droppable1']"));
-
+		
+		// Mouse drag and drop using Action class
+		Actions builder = new Actions(driver);
 		Action dragAndDrop = builder.clickAndHold(yellowBox)
 		   .moveToElement(redBox)
 		   .release(redBox)
@@ -41,6 +41,4 @@ public class DragAndDrop {
 
 		dragAndDrop.perform();
 	}
-
-
 }

@@ -24,16 +24,14 @@ public class ForgotPassword {
 	public void quit() {
 		driver.quit();
 	}
-	
+
 	@Test
 	public void forgotPassword() {
 		driver.findElement(By.id("email")).sendKeys("test@mail.com");
 		driver.findElement(By.id("form_submit")).click();
-		
+
 		String message = driver.findElement(By.id("content")).getText();
-		
+
 		Assert.assertEquals(message, "Your e-mail's been sent!");
 	}
-
-	
 }

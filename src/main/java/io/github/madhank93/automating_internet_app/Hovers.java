@@ -24,19 +24,16 @@ public class Hovers {
 
 	@AfterTest
 	public void quit() {
-		//driver.quit();
+		driver.quit();
 	}
 	
 	@Test
 	public void mouseHover() {
-		
 		Actions actions = new Actions(driver);
 		WebElement element = driver.findElement(By.xpath("//div[@class='example']//div[3]//img[1]"));
 		actions.moveToElement(element).build().perform();
         
         String hoverMessage = driver.findElement(By.xpath("//h5[contains(text(),'name: user3')]")).getText();
-        
         Assert.assertEquals(hoverMessage, "name: user3");
-        
 	}
 }

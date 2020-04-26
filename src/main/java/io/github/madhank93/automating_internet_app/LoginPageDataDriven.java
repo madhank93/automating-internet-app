@@ -14,20 +14,14 @@ import org.testng.annotations.Test;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFCell;
-import org.apache.poi.xssf.usermodel.XSSFFactory;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
@@ -46,7 +40,7 @@ public class LoginPageDataDriven {
 	static String arrOfDOB[];
 	static Random randomNum;
 	static WebDriverWait wait;
-	HashMap<Integer, String> result = new HashMap<Integer, String>(); 
+	HashMap<Integer, String> result = new HashMap<Integer, String>();
 
 	@BeforeTest
 	public void initialSetup() {
@@ -66,13 +60,14 @@ public class LoginPageDataDriven {
 		wait.until(ExpectedConditions.elementToBeClickable(expression));
 	}
 
+	// Reading from and xlsx, passing it to login page and storing the result
 	@SuppressWarnings("resource")
-	@Test (priority = 1)
+	@Test(priority = 1)
 	public void login() throws IOException {
 		// creating a input stream to the xlsx file
-		
+
 		InputStream excelFileToRead = new FileInputStream(System.getProperty("user.dir") + "//" + "test-data.xlsx");
-		
+
 		XSSFWorkbook workBook = new XSSFWorkbook(excelFileToRead); // accessing workbook
 		XSSFSheet sheet = workBook.getSheetAt(0); // getting first sheet
 
@@ -95,7 +90,6 @@ public class LoginPageDataDriven {
 				columnIndex = cell.getColumnIndex();
 
 				switch (columnIndex) {
-
 				case 0:
 					// Username column
 					elementToClickable(By.id("username"));
@@ -107,61 +101,48 @@ public class LoginPageDataDriven {
 					elementToClickable(By.id("password"));
 					driver.findElement(By.id("password")).sendKeys(formatedData.formatCellValue(cell));
 					break;
-
 				}
-
 			}
+			// Clicking on login button
 			elementToClickable(By.xpath("//form[@id='login']//button"));
 			driver.findElement(By.xpath("//form[@id='login']//button")).click();
-			
+
 			String flashMessage = driver.findElement(By.id("flash")).getText();
-			
-			if(flashMessage.contains("secure")) {
+
+			if (flashMessage.contains("secure")) {
 				result.put(row.getRowNum(), "Passed");
-			}
-			else if (flashMessage.contains("invalid")) {
+			} else if (flashMessage.contains("invalid")) {
 				result.put(row.getRowNum(), "Failed");
 			}
-			
-			
-
 		}
 		// close the xlsx files
 		excelFileToRead.close();
 		workBook.close();
-
 	}
-	
+
+	// Writing the results into the xlsx
 	@SuppressWarnings("resource")
-	@Test (priority = 2)
+	@Test(priority = 2)
 	public void writeLoginResult() throws IOException {
-		
+
 		File exfile = new File(System.getProperty("user.dir") + "//" + "test-data.xlsx");
-		
 		FileInputStream file = new FileInputStream(exfile);
 
 		XSSFWorkbook workbook = new XSSFWorkbook(file);
 		XSSFSheet sheet = workbook.getSheetAt(0);
-        
-		
+
 		for (Map.Entry<Integer, String> entry : result.entrySet()) {
 			Row row = sheet.getRow(entry.getKey());
 			Cell cell = row.getCell(2);
-			
+
 			if (cell == null) {
-		        cell = row.createCell(2);
-		    }
-			
-			cell.setCellValue(entry.getValue());   
+				cell = row.createCell(2);
+			}
+			cell.setCellValue(entry.getValue());
 		}
-		
 		file.close();
-		
-		FileOutputStream outFile =new FileOutputStream(exfile);
-        workbook.write(outFile);
-        outFile.close();
-		
+		FileOutputStream outFile = new FileOutputStream(exfile);
+		workbook.write(outFile);
+		outFile.close();
 	}
-
-
 }

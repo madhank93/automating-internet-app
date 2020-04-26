@@ -11,7 +11,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class ContextMenu {
-	
+
 	WebDriver driver;
 	static final String CHROME_DRIVER_PATH = System.getProperty("user.dir") + "/drivers/chromedriver";
 
@@ -26,23 +26,17 @@ public class ContextMenu {
 	public void quit() {
 		driver.quit();
 	}
-	
+
 	@Test
 	public void performMouseRightClick() {
-		
 		WebElement selectArea = driver.findElement(By.xpath("//div[@id='hot-spot']"));
-		
-		Actions action= new Actions(driver);
+
+		// Mouse actions using Actions class
+		Actions action = new Actions(driver);
 		action.contextClick(selectArea);
 		action.build().perform();
-		
+
 		String popupMessage = driver.switchTo().alert().getText();
 		Assert.assertEquals(popupMessage, "You selected a context menu");
-
-		
 	}
-	
-	
-
-
 }

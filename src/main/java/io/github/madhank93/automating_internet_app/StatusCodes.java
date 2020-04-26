@@ -29,15 +29,16 @@ public class StatusCodes {
 		// driver.quit();
 	}
 
+	// REST Assured is used to check status code
 	@Test
 	public void statusCode() {
+		ArrayList<String> URL = new ArrayList<String>();
+		int statuscode;
 
 		// Get all the links on the page
 		List<WebElement> links = driver.findElements(By.tagName("a"));
 
-		ArrayList<String> URL = new ArrayList<String>();
-		int statuscode;
-
+		// Looping through all the element, finding URL link and adding it to the ArrayList
 		for (WebElement link : links) {
 			String href = link.getAttribute("href");
 			URL.add(href);

@@ -24,19 +24,17 @@ public class Dropdown {
 
 	@AfterTest
 	public void quit() {
-		// driver.quit();
+		driver.quit();
 	}
 
 	@Test(priority = 1)
 	public void selectDropdownUsingSelectByValue() {
 		WebElement dropdownElement = driver.findElement(By.id("dropdown"));
 		Select dropdown = new Select(dropdownElement);
-
 		dropdown.selectByValue("1");
-
 		// https://www.browserstack.com/guide/getattribute-method-in-selenium
-		String attribute = driver.findElement(By.xpath("//option[contains(text(),'Option 1')]")).getAttribute("selected");
-
+		String attribute = driver.findElement(By.xpath("//option[contains(text(),'Option 1')]"))
+				.getAttribute("selected");
 		Assert.assertEquals(attribute, "true");
 	}
 
@@ -44,26 +42,19 @@ public class Dropdown {
 	public void selectDropdownUsingSelectByIndex() {
 		WebElement dropdownElement = driver.findElement(By.id("dropdown"));
 		Select dropdown = new Select(dropdownElement);
-
 		dropdown.selectByIndex(2);
-
-		// https://www.browserstack.com/guide/getattribute-method-in-selenium
-		String attribute = driver.findElement(By.xpath("//option[contains(text(),'Option 2')]")).getAttribute("selected");
-
+		String attribute = driver.findElement(By.xpath("//option[contains(text(),'Option 2')]"))
+				.getAttribute("selected");
 		Assert.assertEquals(attribute, "true");
 	}
-	
+
 	@Test(priority = 3)
 	public void selectDropdownUsingSelectByVisibleText() {
 		WebElement dropdownElement = driver.findElement(By.id("dropdown"));
 		Select dropdown = new Select(dropdownElement);
-
 		dropdown.selectByVisibleText("Option 1");
-
-		// https://www.browserstack.com/guide/getattribute-method-in-selenium
-		String attribute = driver.findElement(By.xpath("//option[contains(text(),'Option 1')]")).getAttribute("selected");
-
+		String attribute = driver.findElement(By.xpath("//option[contains(text(),'Option 1')]"))
+				.getAttribute("selected");
 		Assert.assertEquals(attribute, "true");
 	}
-
 }

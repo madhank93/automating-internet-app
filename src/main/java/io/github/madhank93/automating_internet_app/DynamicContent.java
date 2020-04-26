@@ -1,7 +1,5 @@
 package io.github.madhank93.automating_internet_app;
 
-import java.io.IOException;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
@@ -26,31 +24,27 @@ public class DynamicContent {
 
 	@AfterTest
 	public void quit() {
-		// driver.quit();
+		driver.quit();
 	}
 
-	@Test
+	@Test (priority = 1)
 	public void verifyImageChangesOnRefresh() {
-
 		String imgPathBeforeRefresh = driver.findElement(By.xpath("(//div[@class='large-2 columns'])[1]//img"))
 				.getAttribute("src");
-
 		driver.navigate().refresh();
 
 		// Referring the element after refresh otherwise results in Stale element
 		// reference exception
 		String imgPathAfterRefresh = driver.findElement(By.xpath("(//div[@class='large-2 columns'])[1]//img"))
 				.getAttribute("src");
-
 		Assert.assertNotNull(imgPathBeforeRefresh, imgPathAfterRefresh);
 	}
 
-	@Test(expectedExceptions = { StaleElementReferenceException.class })
+	// Expecting StaleElementReferenceException exception to occur
+	@Test (expectedExceptions = { StaleElementReferenceException.class })
 	public void exceptionTest() {
 		WebElement imgPathBeforeRefresh = driver.findElement(By.xpath("(//div[@class='large-2 columns'])[1]//img"));
-		
 		imgPathBeforeRefresh.getAttribute("src");
-
 		driver.navigate().refresh();
 		imgPathBeforeRefresh.getAttribute("src");
 

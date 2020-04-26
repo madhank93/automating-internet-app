@@ -23,7 +23,7 @@ public class MultipleWindows {
 
 	@AfterTest
 	public void quit() {
-		// driver.quit();
+		driver.quit();
 	}
 
 	@Test
@@ -41,5 +41,4 @@ public class MultipleWindows {
 		driver.close();
 		
 	}
-
 }

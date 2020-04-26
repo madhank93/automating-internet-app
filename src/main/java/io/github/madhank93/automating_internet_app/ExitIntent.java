@@ -26,24 +26,22 @@ public class ExitIntent {
 
 	@AfterTest
 	public void quit() {
-		// driver.quit();
+		driver.quit();
 	}
 
 	@Test
 	public void mouseMove() throws AWTException {
-		
+
+		// Mouse movement using Robot class
 		Robot robot = new Robot();
 		robot.mouseMove(150, 150);
 		robot.mouseMove(125, 125);
-		
-		driver.findElement(By.xpath("//p[contains(text(),'Close')]")).isDisplayed();
-		
-		String modalWindowTitle = driver.findElement(By.xpath("//div[@id='ouibounce-modal']//h3")).getText();
-				
-		Assert.assertEquals(modalWindowTitle, "THIS IS A MODAL WINDOW");
-		
-		driver.findElement(By.xpath("//p[contains(text(),'Close')]")).click();
-		
-	}
 
+		driver.findElement(By.xpath("//p[contains(text(),'Close')]")).isDisplayed();
+
+		String modalWindowTitle = driver.findElement(By.xpath("//div[@id='ouibounce-modal']//h3")).getText();
+		Assert.assertEquals(modalWindowTitle, "THIS IS A MODAL WINDOW");
+
+		driver.findElement(By.xpath("//p[contains(text(),'Close')]")).click();
+	}
 }

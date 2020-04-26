@@ -27,6 +27,7 @@ public class BrokenImages {
 		driver.quit();
 	}
 
+	// Using REST-Assured to check the status
 	@Test
 	public void statusCodeOfImage() {
 		

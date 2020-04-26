@@ -50,10 +50,8 @@ public class AddRemoveElements {
 	@Test(priority = 3)
 	public void clickAddButtonUsingMouseAction() {
 		WebElement addButton = driver.findElement(By.xpath("//button[contains(text(),'Add Element')]"));
-		
 		Actions builder = new Actions(driver);
 		Action actions = builder.moveToElement(addButton).click().build();
-
 		actions.perform();
 	}
 	
@@ -76,8 +74,7 @@ public class AddRemoveElements {
 	// To count the number of "Delete" button available
 	@Test(priority = 6)
 	public void countNumberOfDeleteButton() {
-		clickAddButton(); // Calling addElement method, so that delete button count will be increased by 1. Total will be 2.
-						
+		clickAddButton(); // Calling addElement method, so that delete button count will be increased by 1. Total will be 4.				
 		List<WebElement> listOfDeleteButton = driver.findElements(By.xpath("//button[@class='added-manually']"));
 		Assert.assertEquals(listOfDeleteButton.size(), 4);
 	}

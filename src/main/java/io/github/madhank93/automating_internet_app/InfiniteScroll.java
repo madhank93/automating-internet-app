@@ -28,9 +28,9 @@ public class InfiniteScroll {
 		// driver.quit();
 	}
 
+	// Since it's a infinite scroll closing the browser after 10 seconds
 	@Test
 	public void infiniteScroll() {
-
 		boolean footerNote = driver.findElement(By.xpath("//div[contains(text(),'Powered by')]")).isDisplayed();
 
 		try {
@@ -38,21 +38,17 @@ public class InfiniteScroll {
 			t.schedule(new java.util.TimerTask() {
 				@Override
 				public void run() {
-					driver.quit();
+					driver.quit(); // closing the browser after 10 secs
 				}
 			}, 10000);
 
+			// Scrolling down
 			while (footerNote) {
 				JavascriptExecutor jse = (JavascriptExecutor) driver;
 				jse.executeScript("window.scrollTo(0, document.body.scrollHeight);");
 			}
-		}
-
-		catch (NoSuchSessionException e) {
+		} catch (NoSuchSessionException e) {
 			System.out.println("Closed browser after 10 sec");
-
 		}
-
 	}
-
 }

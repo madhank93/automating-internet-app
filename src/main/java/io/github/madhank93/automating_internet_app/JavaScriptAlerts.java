@@ -22,7 +22,7 @@ public class JavaScriptAlerts {
 
 	@AfterTest
 	public void quit() {
-		// driver.quit();
+		driver.quit();
 	}
 
 	
@@ -32,7 +32,6 @@ public class JavaScriptAlerts {
 		driver.switchTo().alert().accept();
 		
 		String resultMessgae = driver.findElement(By.cssSelector("#result")).getText();
-		
 		Assert.assertEquals(resultMessgae, "You successfuly clicked an alert");
 	}
 	
@@ -42,7 +41,6 @@ public class JavaScriptAlerts {
 		driver.switchTo().alert().accept();
 		
 		String resultMessgae = driver.findElement(By.cssSelector("#result")).getText();
-		
 		Assert.assertEquals(resultMessgae, "You clicked: Ok");
 	}
 	
@@ -52,7 +50,6 @@ public class JavaScriptAlerts {
 		driver.switchTo().alert().dismiss();
 		
 		String resultMessgae = driver.findElement(By.cssSelector("#result")).getText();
-		
 		Assert.assertEquals(resultMessgae, "You clicked: Cancel");
 	}
 	
@@ -63,9 +60,6 @@ public class JavaScriptAlerts {
 		driver.switchTo().alert().accept();
 		
 		String resultMessgae = driver.findElement(By.cssSelector("#result")).getText();
-		
 		Assert.assertEquals(resultMessgae, "You entered: I am Madhan");
 	}
-	
-
 }

@@ -10,7 +10,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class Inputs {
-	
+
 	WebDriver driver;
 	static final String CHROME_DRIVER_PATH = System.getProperty("user.dir") + "/drivers/chromedriver";
 
@@ -23,26 +23,25 @@ public class Inputs {
 
 	@AfterTest
 	public void quit() {
-		// driver.quit();
+		driver.quit();
 	}
 
-	@Test (priority = 1)
+	@Test(priority = 1)
 	public void sendStringValue() {
 		WebElement inputBox = driver.findElement(By.tagName("input"));
 		inputBox.sendKeys("I am Madhan");
+
 		String value = inputBox.getAttribute("value");
-				
 		Assert.assertEquals(value, "");
 	}
-	
-	@Test (priority = 2)
+
+	@Test(priority = 2)
 	public void sendNumericalValue() {
 		WebElement inputBox = driver.findElement(By.tagName("input"));
 		inputBox.sendKeys("1234");
+
 		String value = inputBox.getAttribute("value");
-				
 		Assert.assertEquals(value, "1234");
 	}
-	
 
 }

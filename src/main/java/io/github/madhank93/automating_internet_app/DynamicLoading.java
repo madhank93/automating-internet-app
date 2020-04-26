@@ -34,8 +34,7 @@ public class DynamicLoading {
 		WebDriverWait wait = new WebDriverWait(driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#finish")));
 		
-		String textValue = driver.findElement(By.xpath("//div[@id='finish']")).getText();
-			
+		String textValue = driver.findElement(By.xpath("//div[@id='finish']")).getText();	
 		Assert.assertEquals(textValue, "Hello World!");
 
 	}
@@ -49,7 +48,6 @@ public class DynamicLoading {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#finish")));
 		
 		boolean element = driver.findElement(By.id("finish")).isDisplayed();
-			
 		Assert.assertEquals(element, true);
 
 	}

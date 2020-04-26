@@ -24,7 +24,7 @@ public class KeyPresses {
 
 	@AfterTest
 	public void quit() {
-		// driver.quit();
+		driver.quit();
 	}
 	
 	@Test
@@ -42,8 +42,6 @@ public class KeyPresses {
 		
 		inputBox.sendKeys(Keys.BACK_SPACE);
 		result = driver.findElement(By.id("result")).getText();
-		Assert.assertEquals(result, "You entered: BACK_SPACE");
-		
+		Assert.assertEquals(result, "You entered: BACK_SPACE");	
 	}
-
 }

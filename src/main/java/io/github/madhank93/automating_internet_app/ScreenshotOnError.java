@@ -1,16 +1,13 @@
 package io.github.madhank93.automating_internet_app;
 
-import static org.testng.Assert.assertEquals;
-
 import java.io.File;
-import java.io.IOException;
 import java.sql.Timestamp;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.io.FileHandler;
 import org.testng.ITestResult;
@@ -63,7 +60,9 @@ public class ScreenshotOnError {
 		}
 	}
 
-	@Test(priority = 2)
+	// Taking the screenshot automatically when the error occurs by checking the
+	// status of the result after every method has run
+	@Test(expectedExceptions = NoSuchElementException.class)
 	public void generateException() {
 		driver.findElement(By.xpath("element-not-in-the-page")).click();
 	}

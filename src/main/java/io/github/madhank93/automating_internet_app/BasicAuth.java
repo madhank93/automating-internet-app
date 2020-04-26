@@ -26,7 +26,7 @@ public class BasicAuth {
 	
 	@Test (priority = 1)
 	public void sendValidDetails() {
-		// format- username:password@website-address.com
+		// format- username:password@website.com
 		driver.get("https://admin:admin@the-internet.herokuapp.com/basic_auth");
 		String successMessage = driver.findElement(By.xpath("//div[@id='content']//div//p")).getText();
 		Assert.assertEquals(successMessage, "Congratulations! You must have the proper credentials.");

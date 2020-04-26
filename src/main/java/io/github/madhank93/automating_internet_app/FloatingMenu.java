@@ -30,15 +30,14 @@ public class FloatingMenu {
 	public void clickFloatingMenu() {
 		driver.findElement(By.xpath("//a[contains(text(),'Home')]")).click();
 
+		// Scrolling to footer
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
-		
-		driver.findElement(By.xpath("//a[contains(text(),'About')]")).click();
-		
-		String url = driver.getCurrentUrl();
-		
-		Assert.assertEquals(url, "https://the-internet.herokuapp.com/floating_menu#about");
 
+		driver.findElement(By.xpath("//a[contains(text(),'About')]")).click();
+
+		String url = driver.getCurrentUrl();
+		Assert.assertEquals(url, "https://the-internet.herokuapp.com/floating_menu#about");
 	}
 
 }

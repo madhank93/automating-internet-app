@@ -11,13 +11,13 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class ABTesting {
-	
+
 	WebDriver driver;
-	static final String CHROME_DRIVER_PATH = System.getProperty("user.dir")+ "/drivers/chromedriver";
+	static final String CHROME_DRIVER_PATH = System.getProperty("user.dir") + "/drivers/chromedriver";
 
 	@BeforeTest
 	public void initialSetup() {
-		System.setProperty("webdriver.chrome.driver",CHROME_DRIVER_PATH);
+		System.setProperty("webdriver.chrome.driver", CHROME_DRIVER_PATH);
 		driver = new ChromeDriver();
 		driver.get("https://the-internet.herokuapp.com/abtest");
 	}
@@ -27,24 +27,29 @@ public class ABTesting {
 		driver.quit();
 	}
 
-	@Test
-    public void WithCookieAfterVisitingPage() {
-		
-        String headingText = driver.findElement(By.tagName("h3")).getText();
-        assertTrue(headingText.contains("A/B Test"));
-        
-        driver.manage().addCookie(new Cookie("optimizelyOptOut", "true"));
-        driver.navigate().refresh();
-        headingText = driver.findElement(By.cssSelector("h3")).getText();
-        assertTrue(headingText.contains("No A/B Test"));
-    }
-	
-	@Test
-    public void WithOptOutUrl() {
-        driver.get("http://the-internet.herokuapp.com/abtest?optimizely_opt_out=true");
-        driver.switchTo().alert().dismiss();
-        assertTrue(driver.findElement(By.cssSelector("h3")).getText().contains("No A/B Test"));
-    }
+	@Test(priority = 1)
+	public void WithCookieAfterVisitingPage() {
 
+		String headingText; // Store header text
+		
+		// asserting the header test before adding cookie
+		headingText = driver.findElement(By.tagName("h3")).getText();
+		assertTrue(headingText.contains("A/B Test"));
+
+		driver.manage().addCookie(new Cookie("optimizelyOptOut", "true"));
+		driver.navigate().refresh();
+		
+		// asserting the header test before adding cookie
+		headingText = driver.findElement(By.cssSelector("h3")).getText();
+		assertTrue(headingText.contains("No A/B Test"));
+	}
+
+	// Setting opt out in URL query params 
+	@Test(priority = 2)
+	public void WithOptOutUrl() {
+		driver.get("http://the-internet.herokuapp.com/abtest?optimizely_opt_out=true");
+		driver.switchTo().alert().dismiss();
+		assertTrue(driver.findElement(By.cssSelector("h3")).getText().contains("No A/B Test"));
+	}
 
 }

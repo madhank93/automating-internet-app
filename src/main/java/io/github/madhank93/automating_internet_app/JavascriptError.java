@@ -25,28 +25,25 @@ public class JavascriptError {
 
 		LoggingPreferences pref = new LoggingPreferences();
 		pref.enable(LogType.BROWSER, Level.ALL);
-		
+
 		ChromeOptions options = new ChromeOptions();
 		options.setCapability(CapabilityType.LOGGING_PREFS, pref);
-		
-		driver = new ChromeDriver(options);
 
+		driver = new ChromeDriver(options);
 		driver.get("https://the-internet.herokuapp.com/javascript_error");
 	}
 
 	@AfterTest
 	public void quit() {
-		// driver.quit();
+		driver.quit();
 	}
 
+	// Logging the errors and printing it out
 	@Test
 	public void captureAndPrintJSError() {
-		
 		LogEntries jserrors = driver.manage().logs().get(LogType.BROWSER);
-		  for (LogEntry error : jserrors) {
-		   System.out.println(error.getMessage());
-		  }
-
+		for (LogEntry error : jserrors) {
+			System.err.println(error.getMessage());
+		}
 	}
-
 }

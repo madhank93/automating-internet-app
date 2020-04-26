@@ -33,7 +33,6 @@ public class HorizontalSlider {
 		driver.findElement(By.tagName("input")).click();;
 		String range = driver.findElement(By.id("range")).getText();
 		Assert.assertEquals(range, "2.5");
-		
 	}
 	
 	@Test (priority = 2)
@@ -49,9 +48,7 @@ public class HorizontalSlider {
 		WebElement slider = driver.findElement(By.tagName("input"));
 		Actions action = new Actions(driver);
 		action.dragAndDropBy(slider, 60, 0).build().perform();
-		
 		String range = driver.findElement(By.id("range")).getText();
 		Assert.assertEquals(range, "5");
-		
 	}
 }

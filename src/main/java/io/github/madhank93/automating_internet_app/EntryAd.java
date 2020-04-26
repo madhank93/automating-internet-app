@@ -23,19 +23,16 @@ public class EntryAd {
 
 	@AfterTest
 	public void quit() {
-		// driver.quit();
+		driver.quit();
 	}
-	
+
 	@Test
 	public void closeEntryAd() {
-		
 		By closeButton = By.xpath("//p[contains(text(),'Close')]");
-		
-		WebDriverWait wait = new WebDriverWait(driver,30);
+
+		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(closeButton));
-		
+
 		driver.findElement(closeButton).click();
-		
 	}
-	
 }

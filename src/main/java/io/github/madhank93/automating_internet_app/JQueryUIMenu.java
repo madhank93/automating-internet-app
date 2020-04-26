@@ -25,7 +25,7 @@ public class JQueryUIMenu {
 
 	@AfterTest
 	public void quit() {
-		// driver.quit();
+		driver.quit();
 	}
 
 	@Test (priority = 1)
@@ -39,5 +39,4 @@ public class JQueryUIMenu {
 		WebElement PDF = new WebDriverWait(driver, 5).until(ExpectedConditions.elementToBeClickable(By.linkText("PDF")));
 		PDF.click();
 	}
-
 }

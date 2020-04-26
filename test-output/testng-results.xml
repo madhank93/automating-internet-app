@@ -2,28 +2,118 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-04-26T10:11:53 IST" name="Default suite" finished-at="2020-04-26T10:12:03 IST" duration-ms="9862">
+  <suite started-at="2020-04-26T11:43:16 IST" name="Default suite" finished-at="2020-04-26T11:43:22 IST" duration-ms="5986">
     <groups>
     </groups>
-    <test started-at="2020-04-26T10:11:53 IST" name="Default test" finished-at="2020-04-26T10:12:03 IST" duration-ms="9862">
-      <class name="io.github.madhank93.automating_internet_app.FileUploader">
-        <test-method is-config="true" signature="initialSetup()[pri:0, instance:io.github.madhank93.automating_internet_app.FileUploader@272ed83b]" started-at="2020-04-26T10:11:53 IST" name="initialSetup" finished-at="2020-04-26T10:11:55 IST" duration-ms="2099" status="PASS">
+    <test started-at="2020-04-26T11:43:16 IST" name="Default test" finished-at="2020-04-26T11:43:22 IST" duration-ms="5986">
+      <class name="io.github.madhank93.automating_internet_app.ScreenshotOnError">
+        <test-method is-config="true" signature="initialSetup()[pri:0, instance:io.github.madhank93.automating_internet_app.ScreenshotOnError@cad498c]" started-at="2020-04-26T11:43:16 IST" name="initialSetup" finished-at="2020-04-26T11:43:22 IST" duration-ms="5459" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialSetup -->
-        <test-method signature="uploadDocument()[pri:1, instance:io.github.madhank93.automating_internet_app.FileUploader@272ed83b]" started-at="2020-04-26T10:11:55 IST" name="uploadDocument" finished-at="2020-04-26T10:11:59 IST" duration-ms="3948" status="PASS">
+        <test-method signature="generateException()[pri:0, instance:io.github.madhank93.automating_internet_app.ScreenshotOnError@cad498c]" started-at="2020-04-26T11:43:22 IST" name="generateException" finished-at="2020-04-26T11:43:22 IST" duration-ms="43" status="PASS">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"element-not-in-the-page"}
+  (Session info: chrome=81.0.4044.122)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ASMP002.local', ip: '192.168.0.101', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: /var/folders/1w/3t4skmsn2j1...}, goog:chromeOptions: {debuggerAddress: localhost:49201}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: c848db7bc2443e927d8dec7e4d278d00
+*** Element info: {Using=xpath, value=element-not-in-the-page}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"element-not-in-the-page"}
+  (Session info: chrome=81.0.4044.122)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ASMP002.local', ip: '192.168.0.101', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: /var/folders/1w/3t4skmsn2j1...}, goog:chromeOptions: {debuggerAddress: localhost:49201}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: c848db7bc2443e927d8dec7e4d278d00
+*** Element info: {Using=xpath, value=element-not-in-the-page}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at io.github.madhank93.automating_internet_app.ScreenshotOnError.generateException(ScreenshotOnError.java:67)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1378)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- uploadDocument -->
-        <test-method signature="dropFile()[pri:2, instance:io.github.madhank93.automating_internet_app.FileUploader@272ed83b]" started-at="2020-04-26T10:11:59 IST" name="dropFile" finished-at="2020-04-26T10:12:03 IST" duration-ms="3771" status="PASS">
+        </test-method> <!-- generateException -->
+        <test-method is-config="true" signature="screenshotOnFailure(org.testng.ITestResult)[pri:0, instance:io.github.madhank93.automating_internet_app.ScreenshotOnError@cad498c]" started-at="2020-04-26T11:43:22 IST" name="screenshotOnFailure" finished-at="2020-04-26T11:43:22 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=generateException status=SUCCESS method=ScreenshotOnError.generateException()[pri:0, instance:io.github.madhank93.automating_internet_app.ScreenshotOnError@cad498c] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- dropFile -->
-        <test-method is-config="true" signature="quit()[pri:0, instance:io.github.madhank93.automating_internet_app.FileUploader@272ed83b]" started-at="2020-04-26T10:12:03 IST" name="quit" finished-at="2020-04-26T10:12:03 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- screenshotOnFailure -->
+        <test-method signature="fullPageScreenshot()[pri:1, instance:io.github.madhank93.automating_internet_app.ScreenshotOnError@cad498c]" started-at="2020-04-26T11:43:22 IST" name="fullPageScreenshot" finished-at="2020-04-26T11:43:22 IST" duration-ms="295" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fullPageScreenshot -->
+        <test-method is-config="true" signature="screenshotOnFailure(org.testng.ITestResult)[pri:0, instance:io.github.madhank93.automating_internet_app.ScreenshotOnError@cad498c]" started-at="2020-04-26T11:43:22 IST" name="screenshotOnFailure" finished-at="2020-04-26T11:43:22 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=fullPageScreenshot status=SUCCESS method=ScreenshotOnError.fullPageScreenshot()[pri:1, instance:io.github.madhank93.automating_internet_app.ScreenshotOnError@cad498c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- screenshotOnFailure -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:io.github.madhank93.automating_internet_app.ScreenshotOnError@cad498c]" started-at="2020-04-26T11:43:22 IST" name="quit" finished-at="2020-04-26T11:43:22 IST" duration-ms="139" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
-      </class> <!-- io.github.madhank93.automating_internet_app.FileUploader -->
+      </class> <!-- io.github.madhank93.automating_internet_app.ScreenshotOnError -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

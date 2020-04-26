@@ -25,16 +25,17 @@ public class FileUploader {
 	public void initialSetup() {
 		System.setProperty("webdriver.chrome.driver", CHROME_DRIVER_PATH);
 		driver = new ChromeDriver();
-		driver.get("https://the-internet.herokuapp.com/upload");
 	}
 
 	@AfterTest
 	public void quit() {
-		//driver.quit();
+		driver.quit();
 	}
 	
-	@Test
+	@Test(priority = 1)
 	public void uploadDocument() {
+		driver.get("https://the-internet.herokuapp.com/upload");
+		
 		String filename = "some-file.txt";
 		driver.findElement(By.id("file-upload")).sendKeys(System.getProperty("user.dir") + "/" + filename);
 		driver.findElement(By.id("file-submit")).click();
@@ -44,15 +45,16 @@ public class FileUploader {
 		Assert.assertEquals(uploadedFilename, filename);
 	}
 	
-	@Test
+	@Test (priority = 2)
 	public void dropFile() {
-		String filename = "image-test.png";
-		WebElement droparea = driver.findElement(By.id("drag-drop-upload"));
+		driver.get("https://www.dropzonejs.com/");
+		
+		String filename = "some-file.txt";
+		WebElement droparea = driver.findElement(By.id("demo-upload"));
 		
 		DropFile(new File(System.getProperty("user.dir") + "/" + filename), droparea, 0, 0);
-		driver.findElement(By.id("file-submit")).click();
 		
-		String uploadedFilename = driver.findElement(By.id("uploaded-files")).getText();
+		String uploadedFilename = driver.findElement(By.xpath("//span[contains(text(),'some-file.txt')]")).getText();
 		
 		Assert.assertEquals(uploadedFilename, filename);
 		

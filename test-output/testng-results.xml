@@ -2,28 +2,28 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-04-26T09:58:25 IST" name="Default suite" finished-at="2020-04-26T09:58:37 IST" duration-ms="11923">
+  <suite started-at="2020-04-26T10:11:53 IST" name="Default suite" finished-at="2020-04-26T10:12:03 IST" duration-ms="9862">
     <groups>
     </groups>
-    <test started-at="2020-04-26T09:58:25 IST" name="Default test" finished-at="2020-04-26T09:58:37 IST" duration-ms="11923">
-      <class name="io.github.madhank93.automating_internet_app.LoginPageDataDriven">
-        <test-method is-config="true" signature="initialSetup()[pri:0, instance:io.github.madhank93.automating_internet_app.LoginPageDataDriven@66498326]" started-at="2020-04-26T09:58:26 IST" name="initialSetup" finished-at="2020-04-26T09:58:31 IST" duration-ms="5594" status="PASS">
+    <test started-at="2020-04-26T10:11:53 IST" name="Default test" finished-at="2020-04-26T10:12:03 IST" duration-ms="9862">
+      <class name="io.github.madhank93.automating_internet_app.FileUploader">
+        <test-method is-config="true" signature="initialSetup()[pri:0, instance:io.github.madhank93.automating_internet_app.FileUploader@272ed83b]" started-at="2020-04-26T10:11:53 IST" name="initialSetup" finished-at="2020-04-26T10:11:55 IST" duration-ms="2099" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialSetup -->
-        <test-method signature="login()[pri:1, instance:io.github.madhank93.automating_internet_app.LoginPageDataDriven@66498326]" started-at="2020-04-26T09:58:31 IST" name="login" finished-at="2020-04-26T09:58:37 IST" duration-ms="5906" status="PASS">
+        <test-method signature="uploadDocument()[pri:1, instance:io.github.madhank93.automating_internet_app.FileUploader@272ed83b]" started-at="2020-04-26T10:11:55 IST" name="uploadDocument" finished-at="2020-04-26T10:11:59 IST" duration-ms="3948" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-        <test-method signature="writeLoginResult()[pri:2, instance:io.github.madhank93.automating_internet_app.LoginPageDataDriven@66498326]" started-at="2020-04-26T09:58:37 IST" name="writeLoginResult" finished-at="2020-04-26T09:58:37 IST" duration-ms="265" status="PASS">
+        </test-method> <!-- uploadDocument -->
+        <test-method signature="dropFile()[pri:2, instance:io.github.madhank93.automating_internet_app.FileUploader@272ed83b]" started-at="2020-04-26T10:11:59 IST" name="dropFile" finished-at="2020-04-26T10:12:03 IST" duration-ms="3771" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- writeLoginResult -->
-        <test-method is-config="true" signature="quit()[pri:0, instance:io.github.madhank93.automating_internet_app.LoginPageDataDriven@66498326]" started-at="2020-04-26T09:58:37 IST" name="quit" finished-at="2020-04-26T09:58:37 IST" duration-ms="118" status="PASS">
+        </test-method> <!-- dropFile -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:io.github.madhank93.automating_internet_app.FileUploader@272ed83b]" started-at="2020-04-26T10:12:03 IST" name="quit" finished-at="2020-04-26T10:12:03 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
-      </class> <!-- io.github.madhank93.automating_internet_app.LoginPageDataDriven -->
+      </class> <!-- io.github.madhank93.automating_internet_app.FileUploader -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

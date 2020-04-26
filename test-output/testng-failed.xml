@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="io.github.madhank93.automating_internet_app.LoginPageDataDriven">
+      <class name="io.github.madhank93.automating_internet_app.FileUploader">
         <methods>
           <include name="quit"/>
+          <include name="dropFile"/>
           <include name="initialSetup"/>
-          <include name="writeLoginResult"/>
         </methods>
-      </class> <!-- io.github.madhank93.automating_internet_app.LoginPageDataDriven -->
+      </class> <!-- io.github.madhank93.automating_internet_app.FileUploader -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -54,9 +54,6 @@ public class StatusCodes {
 		Assert.assertEquals(statuscode, 404);
 
 		statuscode = RestAssured.get(URL.get(5)).statusCode();
-		Assert.assertEquals(statuscode, 500);
-
-		
+		Assert.assertEquals(statuscode, 500);		
 	}
-
 }

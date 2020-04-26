@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="io.github.madhank93.automating_internet_app.ScreenshotOnError">
+      <class name="io.github.madhank93.automating_internet_app.LoginPageDataDriven">
         <methods>
-          <include name="WithCookieAfterVisitingPage"/>
-          <include name="initialSetup"/>
           <include name="quit"/>
-          <include name="screenshotOnFailure"/>
+          <include name="initialSetup"/>
+          <include name="writeLoginResult"/>
         </methods>
-      </class> <!-- io.github.madhank93.automating_internet_app.ScreenshotOnError -->
+      </class> <!-- io.github.madhank93.automating_internet_app.LoginPageDataDriven -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
